@@ -5,7 +5,7 @@ import CenterRuotes from "./center.routes";
 
 new CenterRuotes();
 
-export function init(app:any) {
+export function init(app: any) {
 	RouterMap.__DecoratedRouters.forEach((controller: any, config: any) => {
 		let controllers = Array.isArray(controller) ? controller : [controller]
 		controllers.forEach((controller) => {
