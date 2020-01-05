@@ -27,7 +27,7 @@ export default class CenterRoutes {
                                 console.log(err);
                                 return res.end(err.toString());
                         } else {
-                                const pythonProcess = spawn('python3.7', ["/root/code/iih-predict/predict.py", [`/root/code/iih-server/src/server/tmp/${fileName}`]]);
+                                const pythonProcess = spawn('python3.7', ["/root/code/iih-predict/predict.py", [`/root/code/iih-server/tmp/${fileName}`]]);
                                 pythonProcess.stdout.on('data', function (data: any) {
                                         let dataStr = data.toString();
                                         console.log(dataStr);
